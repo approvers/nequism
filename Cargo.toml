@@ -1,0 +1,18 @@
+[package]
+name = "nequism"
+version = "0.1.0"
+edition = "2021"
+licence = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+is-gd = { version = "0.1.0" }
+tokio = { version = "1.25.0", features = ["full"] }
+dotenvy = { version = "0.15.6" }
+reqwest = { version = "0.11", features = ["blocking"] }
+
+[dependencies.serenity]
+version = "0.11.5"
+default-features = false
+features = ["rustls_backend", "client", "gateway", "model", "cache"]
